@@ -17,4 +17,8 @@ angular.module('starter.controllers', [])
   $scope.settings = {
     enableFriends: true
   };
-});
+})
+    .controller('ChartCtrl', function($scope) {
+        
+    });
+
