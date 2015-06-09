@@ -19,6 +19,6 @@ angular.module('starter.controllers', [])
   };
 })
     .controller('ChartCtrl', function($scope) {
-        
+
     });
 
