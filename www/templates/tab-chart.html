@@ -1,16 +1,25 @@
-<ion-view view-title="Chats">
-    <ion-content>
-        <ion-list>
-            <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="chat in chats" type="item-text-wrap" href="#/tab/chats/{{chat.id}}">
-                <img ng-src="{{chat.face}}">
-                <h2>{{chat.name}}</h2>
-                <p>{{chat.lastText}}</p>
-                <i class="icon ion-chevron-right icon-accessory"></i>
+<ion-view title="Bar Chart">
+    <ion-content class="padding">
+        <div class="" style="text-align:center">
+            <button ng-click="setType('doughnut')" class="button button-balanced">
+                Doughnut
+            </button>
+            <button ng-click="setType('line')" class="button button-dark">
+                Line
+            </button>
+        </div>
+        <br><br>
 
-                <ion-option-button class="button-assertive" ng-click="remove(chat)">
-                    Delete
-                </ion-option-button>
-            </ion-item>
-        </ion-list>
+        <div ng-if="type == 'line'">
+            <canvas id="line" class="chart chart-line" data="dataset.line.data"
+                    labels="dataset.line.labels" legend="true" series="dataset.line.series"
+                    click="onClick">
+            </canvas>
+        </div>
+        <div ng-if="type == 'doughnut'">
+            <canvas id="doughnut" class="chart chart-doughnut" data="dataset.doughnut.data"
+                    labels="dataset.doughnut.labels"></canvas>
+        </div>
+
     </ion-content>
 </ion-view>
