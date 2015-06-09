@@ -45,7 +45,6 @@ angular.module('starter.controllers', ['chart.js'])
         });
     }
 })
-<<<<<<< HEAD
 
 .controller('ChartCtrl', function($scope) {
       $scope.type = 'doughnut';
@@ -69,9 +68,3 @@ angular.module('starter.controllers', ['chart.js'])
         $scope.type = type;
       }
 })
-=======
-    .controller('ChartCtrl', function($scope) {
-
-    });
->>>>>>> b3685c4ac051d8d06705b9d3835cb16fda228c3f
-
